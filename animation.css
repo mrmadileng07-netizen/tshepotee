@@ -1,0 +1,241 @@
+/* ===========================
+   BLAQUETEE GRAPHICS
+   Animation Styles
+=========================== */
+
+/* Fade In */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Slide From Left */
+
+@keyframes slideLeft{
+
+from{
+opacity:0;
+transform:translateX(-100px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+/* Slide From Right */
+
+@keyframes slideRight{
+
+from{
+opacity:0;
+transform:translateX(100px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+/* Zoom */
+
+@keyframes zoom{
+
+from{
+opacity:0;
+transform:scale(.7);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+/* Floating Animation */
+
+@keyframes floating{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Pulse Glow */
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 10px #FFD200;
+}
+
+50%{
+box-shadow:0 0 35px #FFD200;
+}
+
+100%{
+box-shadow:0 0 10px #FFD200;
+}
+
+}
+
+/* Animated Background */
+
+@keyframes moveBackground{
+
+0%{
+background-position:0 0;
+}
+
+100%{
+background-position:1000px 0;
+}
+
+}
+
+/* Hero Content */
+
+.hero-content h4{
+animation:slideLeft 1s ease;
+}
+
+.hero-content h1{
+animation:fadeIn 1.2s ease;
+}
+
+.hero-content p{
+animation:slideRight 1.5s ease;
+}
+
+.hero-content h3{
+animation:fadeIn 1.8s ease;
+}
+
+.buttons{
+animation:zoom 2s ease;
+}
+
+/* Service Cards */
+
+.card{
+animation:fadeIn 1s ease;
+}
+
+.card:hover{
+
+animation:floating 2s infinite;
+
+}
+
+/* Portfolio */
+
+.album{
+animation:zoom 1s ease;
+}
+
+.album:hover{
+
+animation:pulse 1.2s infinite;
+
+}
+
+/* Contact Buttons */
+
+.contact-buttons a:hover{
+
+animation:pulse 1.3s infinite;
+
+}
+
+/* Logo */
+
+.logo{
+
+animation:slideLeft 1s;
+
+}
+
+/* Navigation Links */
+
+.navbar ul li a{
+
+position:relative;
+
+}
+
+.navbar ul li a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:3px;
+
+background:#FFD200;
+
+transition:.4s;
+
+}
+
+.navbar ul li a:hover::after{
+
+width:100%;
+
+}
+
+/* Hero Background Effect */
+
+.hero{
+
+background-size:cover;
+
+animation:moveBackground 40s linear infinite;
+
+}
+
+/* Scroll Animation */
+
+.card, .album, .contact, .services{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:all .8s ease;
+
+}
+
+.card.active, .album.active, .contact.active, .services.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
